@@ -14,7 +14,6 @@ export const PersonalityTest = () => {
         'Shadow the Hedgehog': 0,
         'Amy Rose the Hedgehog': 0,
         'Rouge the Bat': 0,
-        'Dr.Eggman': 0
     });
     
     const [shuffledQuestions, setShuffledQuestions] = useState([]);
@@ -51,11 +50,7 @@ export const PersonalityTest = () => {
                 const updatedAnswers = { ...prevAnswers };
                 if (answer.increment) {
                     answer.increment.forEach(character => {
-                        if (currentQuestion.id === 7) {
-                            updatedAnswers[character] = (updatedAnswers[character] || 0) + 100;
-                        } else {
-                            updatedAnswers[character] = (updatedAnswers[character] || 0) + 1;
-                        }
+                        updatedAnswers[character] = (updatedAnswers[character] || 0) + 1;
                     });
                 }
                 const nextIndex = currentQuestionIndex + 1;
@@ -107,6 +102,15 @@ export const PersonalityTest = () => {
                     {
                         `You got ${character.name}! This will be important later on, so stay tuned.`
                     }
+                    <p>Character Scores:</p>
+                    <ul>
+                        <li>Sonic: {answers["Sonic the Hedgehog"]}</li>
+                        <li>Tails: {answers['Miles "Tails" Prower']}</li>
+                        <li>Knuckles: {answers["Knuckles the Echidna"]}</li>
+                        <li>Amy: {answers["Amy Rose the Hedgehog"]}</li>
+                        <li>Shadow: {answers["Shadow the Hedgehog"]}</li>
+                        <li>Rouge: {answers["Rouge the Bat"]}</li>
+                    </ul>
 
                     {
                             // character.plotBio.map((paragraph, index) => (

@@ -41,13 +41,13 @@ export const CharactersPages = () => {
                     </tr>
                 </tbody>
             </table>
-            <div className="content">
+            {/* <div className="content">
                 {
                     character.charBio.map((bio, index) => (
                         <p key={index} className="block text-indent">{bio}</p>
                     ))
                 }
-            </div>
+            </div> */}
             <hr/>
         </div>
         </>

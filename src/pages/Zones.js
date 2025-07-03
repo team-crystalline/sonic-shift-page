@@ -1,9 +1,12 @@
-import { zoneInfo, otherLocations } from '../globalVars';
+// import { zoneInfo, otherLocations } from '../globalVars';
 
 export function Zones() {
     return(
         <>
-            <h1 className="title is-1 sonic-title glitch">Zones</h1>
+        <div className="content">
+            <p>Absolutely nothing is ready to be shown about zones, collectibles or anything. Come back when we're ready!</p>
+        </div>
+            {/* <h1 className="title is-1 sonic-title glitch">Zones</h1>
             <div className="content">
                 <p>Sonic Shift presents <strong>eight</strong> zones throughout the game, not including a hub world and other special zones or locations.</p>
             </div>
@@ -56,7 +59,7 @@ export function Zones() {
                         </div>
                     ))
                 }
-            </div>
+            </div> */}
         </>
     )
 }

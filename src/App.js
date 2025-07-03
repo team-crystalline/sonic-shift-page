@@ -1,13 +1,12 @@
 // import logo from './logo.svg';
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import { Link, NavLink, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Game } from "./pages/Download";
 import { NotFound } from "./pages/NotFound";
 import { Characters } from "./pages/Characters";
 import { CharactersPages } from "./pages/characters/CharactersPage";
-import { AIPolicy } from "./pages/AIPolicy";
 import { PersonalityTest } from "./pages/PersonalityTest";
 import { Zones } from "./pages/Zones";
 import logo from "./icon.png";
@@ -27,7 +26,6 @@ function App (){
         <li><NavLink to="/game">Game</NavLink></li>
         <li><NavLink to="/plot">Story</NavLink></li>
         <li><NavLink to="/characters">Characters</NavLink></li>
-        <li><NavLink to="/ai">AI Policy</NavLink></li>
       </ul>
     </nav>
     <hr />
@@ -36,7 +34,6 @@ function App (){
     <Route path="/download" element={<Game />} />
     <Route path="/characters" index element={<Characters />} />
     <Route path="/characters/:name" index element={<CharactersPages />} />
-    <Route path="/ai" index element={<AIPolicy />} />
     <Route path="/plot" index element={<PersonalityTest />} />
     <Route path="/game" index element={<Zones />} />
     
